@@ -8,8 +8,10 @@ export const generateGeminiResponse = async (
   userPrompt: string
 ): Promise<string> => {
   try {
-    // API Key must be obtained from process.env.API_KEY
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    // API Key: prefer environment variable, fallback to inline key below.
+    // Replace "YOUR_GEMINI_API_KEY_HERE" with your actual key.
+    const API_KEY = process.env.API_KEY || "AIzaSyC8cY4f_mv9PyISMWvoGP25LMukeiijiPw";
+    const ai = new GoogleGenAI({ apiKey: API_KEY });
     
     // We will use the chat model to maintain context easily
     const chat = ai.chats.create({
