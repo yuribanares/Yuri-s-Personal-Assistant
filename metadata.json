@@ -1,0 +1,7 @@
+{
+  "name": "Gemini Web Assistant",
+  "description": "A voice-activated AI assistant for the web, powered by Google Gemini. Features speech-to-text, text-to-speech, and persistent API key management.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
